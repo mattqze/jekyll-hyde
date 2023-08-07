@@ -1,6 +1,7 @@
-This is a web-framework that read MarkDown, converts it to their HTML counterparts, then allows you to read them, as Jekyll does.
+# Jekyll-Hyde
+Jekyll-Hyde allows you to use the same posts as Jekyll, but non staticly. Allowing manipulation on-the-fly.
 
 TODO-Problems:
 Themes for Jekyll are not compatible with basic HTML and will need to be adapted.
 
-URLs will be weird. They'll need to use a GET request or the likes to view a post due to post-manager.php handling both scanning and reading .md/.markdown posts.
+URLs will be weird. They'll usea GET request to view a post due to posts.php handling both scanning and reading .md/.markdown posts.
