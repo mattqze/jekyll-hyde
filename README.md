@@ -8,4 +8,13 @@ URLs will be weird. They'll use a GET request to view a post due to posts.php ha
 
 Unnecessary features were removed. Such as RSS/XML feeds, footer-icons and the nav-bar.
 
-[Live version available here](https://blog.tunnull.xyz).
+[Landing Live version available here](https://blog.tunnull.xyz).
+
+# How to use
+For Instancing: 
+`git clone https://github.com/mattqze/jekyll-hyde` - Move /hyde-landing to your Apache/NGINX directory.
+
+For No-Instancing:
+`git clone https://github.com/mattqze/jekyll-hyde` - Move /hyde-nolanding to your Apache/NGINX directory.
+
+Move everything inside of the folder to your Apache/NGINX directory.
