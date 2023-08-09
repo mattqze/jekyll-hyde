@@ -15,6 +15,6 @@ For Instancing:
 `git clone https://github.com/mattqze/jekyll-hyde` - Move /hyde-landing to your Apache/NGINX directory.
 
 For No-Instancing:
-`git clone https://github.com/mattqze/jekyll-hyde` - Move /hyde-nolanding to your Apache/NGINX directory.
+`git clone https://github.com/mattqze/jekyll-hyde-nl` - Move /hyde-nolanding to your Apache/NGINX directory.
 
 Move everything inside of the folder to your Apache/NGINX directory.
