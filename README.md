@@ -18,5 +18,3 @@ For Instancing:
 
 For No-Instancing:
 `git clone https://github.com/mattqze/jekyll-hyde-nl` - Move entire directory to your Apache/NGINX directory.
-
-Move everything inside of the folder to your Apache/NGINX directory.
