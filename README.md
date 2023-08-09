@@ -8,8 +8,8 @@ URLs will be weird. They'll use a GET request to view a post due to posts.php ha
 
 Unnecessary features were removed. Such as RSS/XML feeds, footer-icons and the nav-bar.
 
-[Landing Live version available here](https://hyde.tunnull.xyz).
-[No-Landing Live version available here](https://hyde-nl.tunnull.xyz).
+[Landing Live version available here](https://hyde.tunnull.xyz).<br>
+[No-Landing Live version available here](https://hyde-nl.tunnull.xyz).<br>
 [Personal Hyde blog available here](https://blog.tunnull.xyz).
 
 # How to use
