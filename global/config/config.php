@@ -4,6 +4,7 @@ $blogTitle = 'User\'s Blog';
 $authorName = 'User';
 $authorEmail = 'user@example.com';
 $defaultInstance = 'hyde-pub';
+$blogTheme = 'catppuccin-mocha';
 $instancing = true;
 
 //Landing Instancing Setup

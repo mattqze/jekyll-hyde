@@ -24,15 +24,18 @@ if(isset($_GET['post']))
   include($_SERVER['DOCUMENT_ROOT'].'/global/pkgs/Parsedown.php');
   $selectedPost = $_GET['post'];
   $selectedPost = file_get_contents('_posts/'.$selectedPost);
-  $selectedPost = explode('-', $selectedPost);
-  $postSettings = array_slice($selectedPost, 0, 6);
-  $postContent = array_slice($selectedPost, 6, sizeof($selectedPost));
-  $postSettings = implode(' ', $postSettings);
-  $postSettings = str_replace('-',"",$postSettings);
-  $postSettings = str_replace('layout: post',"",$postSettings);
-  $postSettings = str_replace('title: ',"",$postSettings);
+  $selectedPost = explode("\n", $selectedPost);
+  array_shift($selectedPost);
+  array_shift($selectedPost);
+  $postSettings = array_slice($selectedPost, 0, 1);
+  array_shift($selectedPost);
+  array_unshift($selectedPost,"\n");
+  $postContent = $selectedPost;
+  $postSettings = str_replace(" ","\n",implode('\n', $postSettings));
+  $postSettings = str_replace("title:","",$postSettings);
   $postSettings = str_replace('"',"",$postSettings);
-  $postContent = implode(' ', $postContent);
+  $postContent = implode("\n", $postContent);
+  $postContent = str_replace('---',"",$postContent);
   $post = $_GET['post'];
   $postDate = substr($post, 0, 11);
   $postMonth = substr($postDate, 5,2);
@@ -40,7 +43,7 @@ if(isset($_GET['post']))
   $postDay = str_replace('0', '', substr($postDate, 8,2));
   $postYear = substr($postDate, 0, 4);
   $postDate = $postMonth .' '. $postDay .', '. $postYear;
-  $postContent = '<h1 class="post-title p-name" itemprop="name headline">'.$postSettings.'</h1>'.'<p class="post-meta"><time class="dt-published" itemprop="datePublished">'.$postDate .'</time></p>'. $postContent;
+  $postContent = '<h1 class="post-title p-name" itemprop="name headline">'.$postSettings.'</h1>'.'<p class="post-meta"><time class="dt-published" itemprop="datePublished">'.$postDate .'</time></p>'.$postContent;
   echo Parsedown::instance()->text($postContent);
 }
 ?>

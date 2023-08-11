@@ -1,15 +1,17 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#FF0000">
+</head>
 <?php
   include($_SERVER['DOCUMENT_ROOT'].'/global/config/config.php');
 ?>
 <head>
-    <title><?php echo($blogTitle.' - '.$instances[basename(__DIR__)][0]); ?></title>
-    <link rel='stylesheet' href='/global/theme/minima.css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content=<?php echo('"'.$blogTitle.'"'); ?>  />
-    <meta property="og:url" content=<?php echo("'https://'".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]); ?>/>
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content=<?php echo('"Visit '.$blogTitle.'"'); ?> />
-    <meta name="theme-color" content="#FF0000">
+<meta property="og:description" content=<?php echo('"Visit '.$blogTitle.'"'); ?> />
+<meta property="og:title" content=<?php echo('"'.$blogTitle.'"'); ?>  />
+<meta property="og:url" content=<?php echo("'https://'".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"]); ?>/>
+<link rel='stylesheet' href='/global/theme/<?php echo($blogTheme); ?>.css'>
+<title><?php echo($blogTitle.' - '.$instances[basename(__DIR__)][0]); ?></title>
 </head>
 <body><header class="site-header">
 
